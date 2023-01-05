@@ -7,7 +7,7 @@ from rossmann.Rossmann import Rossmann
 from flask import Flask, request, Response
 
 # loading model
-model = pickle.load( open( 'models/model_n1000.pkl', 'rb'))
+model = pickle.load( open( 'models/model_n500.pkl', 'rb'))
 
 # Initialize API
 app = Flask( __name__ )
