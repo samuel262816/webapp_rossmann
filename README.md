@@ -20,7 +20,7 @@ Para a construção desse projeto foi considerado as seguintes premissas:
   
 ## 2.1. Descrição dos dados:
 | Atributo    | Descrição |
-|:---------   |----------:|
+|:---------   |:----------|
 | Store       | Identificador único para cada loja |
 | Date        | Date em que ocorreu a venda |
 | DateOfWeek  | dia da semana em que ocorreu a venda |
@@ -39,30 +39,76 @@ Para a construção desse projeto foi considerado as seguintes premissas:
 | PromoInterval | Descreve os meses em que a loja iniciou a promo2, ex.: "Feb,May,Aug,Nov" significa que a loja iniciou as promoções estendidas em cada um desses meses |
 
 # 3.	Estratégia da solução
-  1. Coletar os dados no kaggle
-  2. 
+Foi utilizado o método CRISP-DS para seguir o passo a passo e entregar uma primeira solução do problema de forma mais rápida ao CFO.
 
+O método CRISP-DS segue 9 passos cíclicos, no qual, a cada ciclo completo o projeto vai se aperfeiçoando. A utilização desse método permite que já na primeira iteração do ciclo, seja possível ter uma versão do projeto minimamente utilizável para que o mesmo seja aperfeiçoado ao longo do tempo.
 
+## 3.1 Etapas do método CRISP-DS
 
-# 4.	Top 4 Insiths de dados
+  **1. Problema de Negócio:** Receber o problema de negócio a ser resolvido.
+  
+  **2. Entendimento do Negócio:** Entender qual a real queixa e necessidade do dono do problema.
+  
+  **3. Coletar os Dados:** Coletar os dados nos bancos de dados da empresa. Nesse projeto, os dados foram coletados na plataforma do Kaggle.
+  
+  **4. Limpeza dos Dados:** Realizar a limpeza dos dados, retirar caracteres especiais, verificar se o tipo dos dados estão corretos.
+  
+  **5. Exploração dos Dados:** Entender quais variáveis influenciam na variável resposta e também criar novas variáveis que serão utilizadas na modelagem dos dados. Nesse projeto, será avaliado quais variáveis mais impactam nas vendas. Nessa etapa também são criadas várias hipóteses de negócio que serão validadas com técnicas de análise dos dados.
+  
+  **6. Modelagem dos Dados:** Preparar os dados para receber os modelos de Machine Learning. Separar os dados em treino e teste, e realizar os _encoding_ dos dados para facilitar o aprendizado dos algoritmos utilizados.
+  
+  **7. Algoritmos de Machine Learning:** Aplicar os algotimos de Machine Learning dos dados preparados anteriormente.
+  
+  **8. Avaliação dos Algoritmos:** Verificar a performance dos algoritmos, comparando-os entre eles e selecionando o melhor algorítmo. Caso a performance esteja minimamente utilizável, poderá seguir para publicação do modelo em produção. Caso não esteja, é necessário voltar à etapa de entendimento do negócio e passar por um novo ciclo do CRISP-DS até atingir a performance desejada.
+  
+  **9. Modelo em Produção:** Publicar o modelo em produção para que a solução seja utilizado pelos donos do problema.
+  
+## 3.2 Ferramentas Utilizadas
+Para criar a solução foram utilizadas as seguintes ferramentas:
+ - Linguagem de Programação Python 3.9.13
+ - Jupyter Notebook para prototipar a solução
+ - VSCode para implementação da solução
+ - Técnicas de manipulação de dados com Python
+ - Técnicas de redução de dimensionalidade e seleção de atributos
+ - Algoritmos de Machile Learning da biblioteca scikit-learnig em Python
+ - Versionador de código Git
+ - Hospedagem em Nuvem Render 
 
-  1. 
+# 4.	Top 3 Insiths de dados
 
-  2. 
+  ## Insight 1: Lojas com maior sortimento deveriam vender mais.
+**Hipótese Falsa:** Lojas com maior sortimento vendem menos em comparação às de menor sortimento.
 
-  3. 
+  ## Insight 2: Lojas com competidores mais próximos deveriam vender menos.
+**Hipótese Falsa:** Lojas com competidores próximos vendem mais.
 
-  4. 
+  ## Insight 3: Lojas abertas durante feriado de Natal vendem mais.
+**Hipótese Falsa:** Lojas abertas no Natal vendem menos em comparação aos outros feriados.
+
 
 # 5.	O produto final do projeto
+Foi combinado com o CFO que seria entregue um Bot no aplicativo Telegram, no qual o usuário digitará o código da loja e o Bot retornará a previsão de vendas das próximas 6 semanas da loja solicitada.
+
+Além disso, será criado uma API que utilizará o modelo de machine learning desenvolvido para retornar as previsões de venda das lojas. 
+ 
+
+# 6.	Modelos de Machine Learning
+
+
+## 6.1 Seleção dos Modelos
+ 
+ 
+# 7.	Resultado de Negócio
+ 
+ 
+ 
+# 8.	Conclusões
+
+
+# 9.	Lições Aprendidadas
 
 
 
-
-# 6.	Conclusão
-
-
-
-# 7.	Próximos Passos
+# 10.	Próximos Passos
   1.	
   2.	
