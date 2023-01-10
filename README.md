@@ -1,4 +1,4 @@
-<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/logo_rossmann.png' width= 1000 height= 400>
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/logo_rossmann.png' width= 900 height= 180>
 
 # Conhecendo o negócio
 
