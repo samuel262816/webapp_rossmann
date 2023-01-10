@@ -1,8 +1,11 @@
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/logo_rossmann.png' width= 1000 height= 400>
+
 # Conhecendo o negócio
 
 Criada em 1972, a Rossmann é uma rede de drogaria Alemã que atua em 8 países na Europa, conta com mais de 4 mil lojas e com mais de 56 mil colaboradores.
 
 A empresa disponibilizou 1.027.209 registros de vendas de suas lojas na plataforma de competições do Kaggle, no qual, cada registro contém 18 atributos únicos.
+
 
 # 1.	O problema de negócio
   O CFO da empresa fez uma reunião com todos os gerentes de loja e pediu para que cada um deles trouxessem uma previsão das próximas 6 semanas de vendas para que parte desse valor fosse designado na reformar as lojas da rede.
@@ -38,10 +41,13 @@ Para a construção desse projeto foi considerado as seguintes premissas:
 | Promo2Since[Year/Week]   | Indica o ano e semana de quando a loja começa a promoção extendida |
 | PromoInterval | Descreve os meses em que a loja iniciou a promo2, ex.: "Feb,May,Aug,Nov" significa que a loja iniciou as promoções estendidas em cada um desses meses |
 
+
 # 3.	Estratégia da solução
 Foi utilizado o método CRISP-DS para seguir o passo a passo e entregar uma primeira solução do problema de forma mais rápida ao CFO.
 
 O método CRISP-DS segue 9 passos cíclicos, no qual, a cada ciclo completo o projeto vai se aperfeiçoando. A utilização desse método permite que já na primeira iteração do ciclo, seja possível ter uma versão do projeto minimamente utilizável para que o mesmo seja aperfeiçoado ao longo do tempo.
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/ciclo_crisp2.PNG'>
 
 ## 3.1 Etapas do método CRISP-DS
 
@@ -74,16 +80,23 @@ Para criar a solução foram utilizadas as seguintes ferramentas:
  - Versionador de código Git
  - Hospedagem em Nuvem Render 
 
+
 # 4.	Top 3 Insiths de dados
 
   ## Insight 1: Lojas com maior sortimento deveriam vender mais.
 **Hipótese Falsa:** Lojas com maior sortimento vendem menos em comparação às de menor sortimento.
 
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/hipotese1.PNG'>
+
   ## Insight 2: Lojas com competidores mais próximos deveriam vender menos.
 **Hipótese Falsa:** Lojas com competidores próximos vendem mais.
 
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/hipotese2.PNG'>
+
   ## Insight 3: Lojas abertas durante feriado de Natal vendem mais.
 **Hipótese Falsa:** Lojas abertas no Natal vendem menos em comparação aos outros feriados.
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/hipotese3.PNG'>
 
 
 # 5.	O produto final do projeto
