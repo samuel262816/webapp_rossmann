@@ -8,7 +8,7 @@ A empresa disponibilizou 1.027.209 registros de vendas de suas lojas na platafor
 
 
 # 1.	O problema de negócio
-  O CFO da empresa fez uma reunião com todos os gerentes de loja e pediu para que cada um deles trouxessem uma previsão das próximas 6 semanas de vendas para que parte desse valor fosse designado na reformar as lojas da rede.
+  O CFO da empresa fez uma reunião com todos os gerentes de loja e pediu para que cada um deles trouxessem uma previsão das próximas 6 semanas de vendas para que parte desse valor fosse designado para o budget de reforma das lojas da rede.
   
   Atualmente, esses valores são calculados de forma individual, sendo que cada gerente realiza a entrega dessa previsão. Como cada loja possui fatores distintos que influenciam em seus resultados, como promoções, competições por clientes, feriados, sazonalidade e etc, e os cálculos são feitos de forma manual, os resultados variam muito.
   
