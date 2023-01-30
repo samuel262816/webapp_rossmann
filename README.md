@@ -142,7 +142,7 @@ Para confirmação dos resultados obtidos, foi realizado a técnica de **_Cross 
 
 Os resultados obtidos no _Cross Validation_ foram os seguintes:
 
-imagem cross validation
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/cross_validation.PNG' width= 750 height= 250 >
 
 ## 6.3 Escolha do Modelo
 Apesar de que o modelo _Random Forest Regressor_ tenha tido uma performance melhor, foi escolhido para esse primeiro ciclo do projeto, prosseguir com o modelo _XGBoost Regressor_ pelos seguintes motivos:
@@ -154,25 +154,46 @@ Apesar de que o modelo _Random Forest Regressor_ tenha tido uma performance melh
   3. O modelo final com os ajustes de hiperparâmetros no algorítmo da _Random Forest Regressor_ é muito mais pesado e ocupará mais espaço de armazenamento em servidores do que o modelo final do _XGBoost Regressor_.
 
 ## 6.4 Ajuste dos Hiperparâmetros
+Para ajuste dos melhores hiperparâmetros, foi utilizado a técnica de _Randon Search_, na qual é passado alguns valores previamente e o algorítmo faz vários testes aleatórios e retorna os resultados encontrados, os quais foram o seguinte:
 
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/fine_tuning_result.png'>
 
+Tendo como base o resultado obtido, o melhor hiperparâmetro encontrado foi o 4º teste. Sendo assim, esses foram os utilizados no modelo.
 
 ## 6.5 Performance do Modelo
+O modelo teve um resultado aceitável já nesse primeiro ciclo do projeto. Como pode ser observado nos dois primeiros gráficos abaixo, o modelo conseguiu reproduzir o padrão de vendas ao longo do tempo.
 
+No terceiro gráfico, é possível visualizar uma distribuição do erro do modelo próxima de uma distribuição normal. E por último, conseguimos observar a distribuição do erro em relação à quantidade de previsões realizadas.
 
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/performance_model.PNG' >
 
 # 7.	Resultado de Negócio
- 
- 
- 
+Com o modelo escolhido e treinado, obtivemos os seguintes resultados de previsão, melhor cenários e pior cenário de vendas: 
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/cenarios.PNG' width= 300 height= 180 >
+
+Além disso, abaixo estão os resultados das 5 melhores lojas na previsão das vendas:
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/melhores_lojas.PNG' width= 600 height= 200 >
+
+É importante ressaltar que, também tiveram algumas poucas lojas com resultados ruins e que num próximo ciclo do projeto deve serem analisadas individualmente e tratados os erros para melhorar a performance do modelo.
+
+## 7.1 Distribuição das Previsões por Loja
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/previsao_lojas.PNG' >
+
 # 8.	Conclusões
+Com a execução do projeto, conseguimos resolver o problema inicial que era a previsão de faturamento das lojas da rede. 
 
-
+Além disso, foi criado um Bot no Telegram o qual retorna de forma automática, a previsão de vendas individual de cada loja, diretamente no celular do CFO. Essa solução trouxe agilidade na tomada de decisão, uma vez que o CFO consegue fazer essa verificação rapidamente de qualquer lugar que esteja, desde que tenha um acesso à internet.
 
 # 9.	Lições Aprendidadas
-
-
+ - Desenvolver projetos de forma cíclica para entregar uma primeira solução minimamente utilizável mais rapidamente.
+ - Priorização de tarefas por ciclo de projeto.
+ - Construção de um Bot no Telegram para entrega dos resultados de forma rápida e de fácil utilização.
 
 # 10.	Próximos Passos
-  1.	
-  2.	
+  1. Treinar o modelo com outros algorítmos em um próximo ciclo para avaliar a performance.
+  2. Criar outra aplicação para visualização das previsões para que seja se fácil acesso dos gerentes das lojas
+  3. Investigar a razão de algumas lojas estarem com previsões ruins.
+  4. Criar novas _features_ para tentar melhorar a performance do modelo
