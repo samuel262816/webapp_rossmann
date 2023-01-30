@@ -82,6 +82,13 @@ Para criar a solução foram utilizadas as seguintes ferramentas:
 
 
 # 4.	Top 3 Insiths de dados
+Para facilitar a análise exploratória de dados, foi criado um Mapa Mental para ajudar na construção das hipóteses de negócio.
+
+<img src= 'https://github.com/samuel262816/webapp_rossmann/blob/main/img/mind_map.png'>
+
+Tendo o Mapa Mental como guia, foi gerado um total de 19 hipóteses e dentro dessas, foi selecionado 12 para validação e confirmação das premissas da equipe de negócio.
+
+Dentre as hipóteses validadas, os 03 principais insights foram:
 
   ## Insight 1: Lojas com maior sortimento deveriam vender mais.
 **Hipótese Falsa:** Lojas com maior sortimento vendem menos em comparação às de menor sortimento.
@@ -106,16 +113,60 @@ Além disso, será criado uma API que utilizará o modelo de machine learning de
  
 
 # 6.	Modelos de Machine Learning
+Nesse primeiro ciclo do projeto foram escolhidos 5 algoritmos para teste, sendo o primeiro deles, o modelo de média. Esse modelo é super importante para servir de base comparativa na implementação dos demais modelos e saber assim, qual deles realmente tem uma boa performance.
 
+Além disso, para escolha das melhores variáveis que seriam utilizadas no treinamento dos modelos, foi utilizado o algorítmo do Boruta para auxiliar a escolha das _features_ mais importantes.
+
+Os algorítmos implementados foram:
+ - Average Model
+ - Linear Regression
+ - Linear Regression Regularized
+ - Random Forest Regressor
+ - XGBoost Regressor
 
 ## 6.1 Seleção dos Modelos
- 
- 
+Após implementação e treinamento dos modelos escolhidos, foi comparado a performance de cada um deles e utilizado a métrica **RMSE (Root Mean Square Error)** como parâmetro na escolha dos modelos. A métrica do RMSE foi escolhido pois a presença de outliers é mais sensível nessa métrica e por isso ela é importante para medição de performance.
+
+O resultado dos testes realizados pode ser visto na tabela abaixo:
+
+| Modelo                        | MAE | MAPE | RMSE |
+|:------------------------------|:---:|:----:|:----:|
+| Average Model                 | 1354.800353    | 0.2064     | 1835.135542      |
+| Linear Regression             | 1861.127229    | 0.291652   | 2662.291292      |
+| Linear Regression Regularized | 1891.398729    | 0.289252   | 2743.459296      |
+| Random Forest Regressor       | 687.689657     | 0.10103    | 1023.529505      |
+| XGBoost Regressor             | 856.309298     | 0.122965   | 1259.036758      |
+
+## 6.2 _Cross Validation_
+Para confirmação dos resultados obtidos, foi realizado a técnica de **_Cross Validation_** para validar os resultados. Como esse problema se trata de uma série temporal, a linha do tempo precisa ser respeitada e por isso foi necessário utilizar uma técnica de _Cross Validation_ específica, separando os dados em 5 partes de 6 em 6 semanas e treinando o modelo na ordem crononógica.
+
+Os resultados obtidos no _Cross Validation_ foram os seguintes:
+
+imagem cross validation
+
+## 6.3 Escolha do Modelo
+Apesar de que o modelo _Random Forest Regressor_ tenha tido uma performance melhor, foi escolhido para esse primeiro ciclo do projeto, prosseguir com o modelo _XGBoost Regressor_ pelos seguintes motivos:
+
+  1. O erro entre esses dois modelos é pequeno.
+
+  2. O tempo de treinamento do _XGBoost Regressor_ é mais rápido que o tempo de treinamento da _Random Forest Regressor_.
+
+  3. O modelo final com os ajustes de hiperparâmetros no algorítmo da _Random Forest Regressor_ é muito mais pesado e ocupará mais espaço de armazenamento em servidores do que o modelo final do _XGBoost Regressor_.
+
+## 6.4 Ajuste dos Hiperparâmetros
+
+
+
+## 6.5 Performance do Modelo
+
+
+
 # 7.	Resultado de Negócio
  
  
  
 # 8.	Conclusões
+
 
 
 # 9.	Lições Aprendidadas
